@@ -3,64 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chat Assistant</title>
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>L'Oréal Product Chatbot</title>
+    <!-- Link to the CSS file for styling -->
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <div class="page-wrapper">
-      <!------- Header / Branding ------->
-      <header class="site-header">
-        <h1 class="site-title">Smart Product Advisor</h1>
-      </header>
-
-      <!------- Chat Area ------->
-      <main>
-        <section class="chatbox">
-          <div id="chatWindow" class="chat-window">
-            <!-- messages will be appended here via JS -->
-          </div>
-
-          <form id="chatForm" class="chat-form">
-            <label for="userInput" class="visually-hidden">Message</label>
-            <input
-              id="userInput"
-              name="userInput"
-              type="text"
-              placeholder="Ask me about products or routines…"
-              autocomplete="off"
-              required
-            />
-            <button type="submit" id="sendBtn">
-              <span class="material-icons">send</span>
-              <span class="visually-hidden">Send</span>
-            </button>
-          </form>
-        </section>
-      </main>
-
-      <!------- Footer Links ------->
-      <footer class="site-footer">
-        <p>&copy; 2025 Company Name. All rights reserved.</p>
-        <nav>
-          <!-- These URLs are placeholders -->
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-          <a href="#">Contact</a>
-        </nav>
-      </footer>
+    <!-- Chatbox container -->
+    <div class="chatbox">
+      <!-- Header with L'Oréal logo and brand name -->
+      <div class="chatbox-header">
+        <img src="img/loreal-logo.png" alt="L'Oréal Logo" class="loreal-logo" />
+        <span class="brand-name">Chatbot</span>
+      </div>
+      <!-- Chat messages area -->
+      <div class="chatbox-messages" id="chatbox-messages">
+        <!-- Messages will appear here -->
+      </div>
+      <!-- Input area for user messages -->
+      <form id="chatbox-form" class="chatbox-form">
+        <input
+          type="text"
+          id="chatbox-input"
+          placeholder="Ask about L'Oréal products..."
+          autocomplete="off"
+        />
+        <button type="submit">Send</button>
+      </form>
     </div>
-
-    <!-- secrets.js can be removed when using Cloudflare Workers for API requests -->
-    <script src="secrets.js"></script>
-    <script src="script.js"></script>
+    <!-- Link to the JS file for interactivity -->
+    <script src="chatbot.js"></script>
   </body>
 </html>
